@@ -37,12 +37,12 @@
 #define AS(keycode) &as LS(keycode) keycode
 
 /{
- behaviors {
-        a_encoder: a_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "A_ENCODER";
-            #sensor-binding-cells = <0>;
-            bindings = <&mwh MWH_U>, <&mwh MWH_D>;
+behaviors {
+        rot_kp: behavior_sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ENC_KP";
+            #sensor-binding-cells = <2>;
+            bindings = <&mwh>, <&mwh>;
         };
     };
 
@@ -182,7 +182,7 @@ modcp: mod_copy {
 &kp GRAVE  &kp LGUI  &kp SPACE &kp BSPC                    &kp UP &kp SPACE    &kp LBKT  &kp RBKT          
 &kp LALT &none	&kp LCTRL 	&kp DEL 	       &kp LEFT   &kp RIGHT &none &kp DOWN  
             >;
-sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+sensor-bindings = <&rot_kp MWH_R MWH_R &rot_kp MWH_R MWH_R>;
                 trackball-bindings = <&tmv>;
         };  
 
