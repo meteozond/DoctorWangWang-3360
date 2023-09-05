@@ -46,14 +46,7 @@
         };
     };
 
-    keymap {
-        compatible = "zmk,keymap";
 
-        base {
-            ...
-            sensor-bindings = <&rgb_encoder>;
-        }
-    };
 
 
         behaviors {
