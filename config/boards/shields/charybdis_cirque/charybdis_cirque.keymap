@@ -38,9 +38,9 @@
 
 /{
  behaviors {
-        right_encoder: right_encoder {
+        a_encoder: a_encoder {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "RIGHT_ENCODER";
+            label = "A_ENCODER";
             #sensor-binding-cells = <0>;
             bindings = <&mwh MWH_U>, <&mwh MWH_D>;
         };
@@ -182,7 +182,7 @@ modcp: mod_copy {
 &kp GRAVE  &kp LGUI  &kp SPACE &kp BSPC                    &kp UP &kp SPACE    &kp LBKT  &kp RBKT          
 &kp LALT &none	&kp LCTRL 	&kp DEL 	       &kp LEFT   &kp RIGHT &none &kp DOWN  
             >;
- sensor-bindings = <&right_encoder>;
+ sensor-bindings = <&a_encoder>;
                 trackball-bindings = <&tmv>;
         };  
 
