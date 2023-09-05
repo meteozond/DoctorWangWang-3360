@@ -38,7 +38,7 @@
 
 /{
  behaviors {
-        rgb_encoder: rgb_encoder {
+        right_encoder: right_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             label = "RIGHT_ENCODER";
             #sensor-binding-cells = <0>;
